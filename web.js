@@ -1,10 +1,11 @@
+var Buffer = require('buffer').Buffer
 var fs = require('fs');
 var express = require('express');
-var buffer = new Buffer(100);
+var buffer = new Buffer(fs.readFileSync('index.html', 'utf-8');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString('utf-8')fs.readFileSync('index.html'));
+  response.send(buffer.toString('utf-8');
   //response.send('Hello to all the World 2!');
 });
 
